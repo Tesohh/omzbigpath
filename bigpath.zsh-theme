@@ -1,6 +1,5 @@
-# prompt style and colors based on Steve Losh's Prose theme:
-# https://github.com/sjl/oh-my-zsh/blob/master/themes/prose.zsh-theme
-#
+# prompt style and colors based on the halflife theme from the omz team:
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/half-life.zsh-theme
 # vcs_info modifications from Bart Trojanowski's zsh prompt:
 # http://www.jukie.net/bart/blog/pimping-out-zsh-prompt
 #
@@ -83,7 +82,7 @@ function steeef_precmd {
         # check for untracked files or updated submodules, since vcs_info doesn't
         if [[ ! -z $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
             PR_GIT_UPDATE=1
-            FMT_BRANCH="${PM_RST}%{$turquoise%}/%{$turquoise%}%b%u%c%{$hotpink%} ●${PR_RST}"
+            FMT_BRANCH="${PM_RST}%{$turquoise%}/%{$turquoise%}%b%u%c%{$turquoise%} ●${PR_RST}"
         else
             FMT_BRANCH="${PM_RST}%{$turquoise%}/%{$turquoise%}%b%u%c${PR_RST}"
         fi
